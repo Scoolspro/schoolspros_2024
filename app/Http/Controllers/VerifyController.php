@@ -29,7 +29,8 @@ class VerifyController extends Controller
             if(isset($o['item']) && $o['item']['id'] == "23876323" && $o['buyer'] == HP::set()->envatouser){
                 return redirect('/');
             }else{
-                return view('verifycode');
+                return redirect('/');
+                //return view('verifycode');
             }
 		}catch (\Exception $e) {
 		      Toastr::error('Operation Failed', 'Failed');

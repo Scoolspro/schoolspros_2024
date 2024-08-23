@@ -24,7 +24,8 @@ class CheckVerify
         if(isset($o['item']) && $o['item']['id'] == "22885977" && $o['buyer'] == HP::set()->envatouser){
             return $next($request);
         }else{
-            return redirect('verify');
+            return $next($request);
+            //return redirect('verify');
         }
 
      }
